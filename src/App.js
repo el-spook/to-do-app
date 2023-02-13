@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// Import the two other components to be rendered on this page:
+import AddTask from './components/AddTask';
+import Tasks from './components/Tasks';
 
+// The App component returns a container div with an h1, and the AddTask and Tasks components:
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header> 
+        <h1>To Do List</h1>
       </header>
+      <AddTask />
+      <Tasks />
     </div>
   );
 }
 
 export default App;
+
+
+/* 
+Some of the ideas for this app were gained from me having previously
+followed a free YouTube tutorial on React, which involved making a to do list:
+https://youtu.be/w7ejDZ8SWv8 This tutorial didn't involve Redux or Redux Toolkit.
+*/
